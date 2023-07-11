@@ -26,6 +26,7 @@ export const ContactForm = () => {
     }
 
     dispatch(addContact(contact));
+    e.currentTarget.reset();
   };
   return (
     <form onSubmit={handleSubmit} className={css.formWrapper}>
