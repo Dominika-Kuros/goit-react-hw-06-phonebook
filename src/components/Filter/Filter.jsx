@@ -14,7 +14,7 @@ export const Filter = () => {
           name="filter"
           type="text"
           value={value}
-          onChange={e => dispatch(setFilter(e.target.value))}
+          onChange={e => dispatch(setFilter(e.target.value.trim()))}
         />
       </label>
     </div>

@@ -7,12 +7,15 @@ export const ContactList = () => {
   const filter = useSelector(getFilter);
   const dispatch = useDispatch();
   const filteredContacts = () =>
-    filter
-      ? contacts.filter(contact =>
-          contact.name.toLowerCase().includes(filter.toLowerCase())
-        )
-      : contacts;
+    contacts.filter(contact =>
+      contact.name.toLowerCase().includes(filter.toLowerCase())
+    );
+
   const handleDelete = id => dispatch(deleteContact(id));
+
+  if (!filteredContacts) {
+    return <h2>no contacts found</h2>;
+  }
 
   return (
     <ul>
