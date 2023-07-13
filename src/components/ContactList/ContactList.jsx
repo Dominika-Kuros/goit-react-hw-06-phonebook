@@ -13,9 +13,9 @@ export const ContactList = () => {
 
   const handleDelete = id => dispatch(deleteContact(id));
 
-  if (!filteredContacts) {
-    return <h2>no contacts found</h2>;
-  }
+  // if (filteredContacts.length === 0) {
+  //   return <h2>no contacts found</h2>;
+  // }
 
   return (
     <ul>
