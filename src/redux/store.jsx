@@ -15,12 +15,7 @@ export const store = configureStore({
     filter: filterReducer,
   },
 
-  middleware: getDefaultMiddleware =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: [],
-      },
-    }),
+
 });
 
 export const persistor = persistStore(store);
